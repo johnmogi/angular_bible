@@ -8,6 +8,8 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ItemsComponent } from './pages/items/items.component';
 import { ItemComponent } from './pages/item/item.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FullMaterialModule } from './layouts/material-module';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ItemComponent } from './pages/item/item.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FullMaterialModule
   ],
   providers: [],
   bootstrap: [LayoutComponent]
