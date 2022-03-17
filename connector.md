@@ -47,5 +47,26 @@ export class ItemModel {
         public price?:number,
         public imageFile?:string | File ){} }
 
+0. ng g s services/item --skip-tests;
+
+0. add  HttpClient, Observable:
+import { HttpClient } from '@angular/common/http'; 
+import { Observable } from 'rxjs'; 
+export class ItemsComponent implements OnInit {
+  public myApi = 'http://localhost:3000/api/'; 
+  constructor(private http: HttpClient){}
+  public getAllItems(): Observable<ItemModel[]> { 
+    return this.http.get<ItemModel[]>(this.myApi + "items"); }
+
+0. itemsComponent consume api:
+export class ItemsComponent implements OnInit {
+  public items: ItemModel[] 
+  constructor(private itemService: ItemService) { }
+  ngOnInit() { 
+    this.itemService.getAllItems().subscribe(
+       (items) => (this.items = items, 
+        console.log(this.items)), 
+        (err) => alert(err.message)); 
+      }
 
 0. 
