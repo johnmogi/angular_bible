@@ -1,4 +1,5 @@
 0. nest new server
+https://github.com/piotr-jura-udemy/master-nest-js/tree/01-07-dto-update/src
 
 0. items.controller.ts:
 import { Body, Controller, Delete, Get, HttpCode, Param, Patch, Post } from "@nestjs/common";
