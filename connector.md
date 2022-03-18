@@ -142,6 +142,8 @@ export class ItemModel {
 0. ng g s services/item --skip-tests;
 
 0. add  HttpClient, Observable:
+1-import import { HttpClientModule } from '@angular/common/http';
+to app.module.ts...
 import { HttpClient } from '@angular/common/http'; 
 import { Observable } from 'rxjs'; 
 export class ItemsComponent implements OnInit {

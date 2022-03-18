@@ -10,13 +10,13 @@ import { ItemService } from 'src/app/services/item.service';
 
 export class ItemsComponent implements OnInit {
   public items: ItemModel[]
-  // constructor(private itemService: ItemService) { }
+  constructor(private itemService: ItemService) { }
 
   ngOnInit() {
-  //   this.itemService.getAllItems().subscribe(
-  //     (items) => (this.items = items,
-  //       console.log(this.items)),
-  //     (err) => alert(err.message));
+    this.itemService.getAllItems().subscribe(
+      (items) => (this.items = items,
+        console.log(this.items)),
+      (err) => alert(err.message));
   }
 
 }

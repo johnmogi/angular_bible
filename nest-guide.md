@@ -35,4 +35,9 @@ export class ItemsController {
 import { CreateEventDto } from './create-event.dto';
 export class UpdateEventDto extends PartialType(CreateEventDto) { }
 
+0. CORS:
+const app = await NestFactory.create(AppModule);
+app.enableCors();
+await app.listen(3000);
+
 0. 

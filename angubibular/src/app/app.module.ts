@@ -10,6 +10,7 @@ import { ItemsComponent } from './pages/items/items.component';
 import { ItemComponent } from './pages/item/item.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FullMaterialModule } from './layouts/material-module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FullMaterialModule } from './layouts/material-module';
     ItemComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
